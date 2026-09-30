@@ -1,0 +1,23 @@
+.perfil{
+    border: 2px dashed red;
+    border-radius: 5%;
+    display: inline-block;
+    margin: 10px;
+}
+
+h2{
+    border: 2px dashed blue;
+    border-radius: 5%;
+    font-size: 1.1rem;
+    margin: 15px;
+}
+
+strong{
+    font-size: 0.9rem;
+    margin: 15px;
+}
+
+p{
+    color: blue;
+    margin: 15px;
+}

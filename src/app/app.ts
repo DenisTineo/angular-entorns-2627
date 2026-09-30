@@ -4,11 +4,14 @@ import { Producte } from './interfaces/producte';
 import { Producte as ProducteClass } from './producte'; //importem la classe producte assignant un alias
 import { pokemon } from './interfaces/pokemon';
 import { findById, formatarElement, getActius } from './funcions';
+import { Alumne } from './alumne';
+import { Tarjeta } from './components/tarjeta/tarjeta';
+import { Perfil } from './components/perfil/perfil';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Tarjeta, Perfil],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -63,10 +66,20 @@ export class App {
 
   dex : pokemon[] = [this.p1, this.p2, this.p3, this.p4, this.p5];
 
+  a1 = new Alumne('Alex', 15, 'DAW', [1,5,6,3]);
+  a2 = new Alumne('Biel', 19, 'DAM', [10,6,9,4]);
+
   constructor(){
     console.log(getActius(this.dex));
     console.log(findById(this.dex, 1));
     console.log(formatarElement(this.dex[4]));
+    console.log(this.a1.presentar());
+    console.log(this.a1.haAprobat());
+    console.log(this.a2.presentar());
+    console.log(this.a2.haAprobat());
   }
+
+
+
 
 }
