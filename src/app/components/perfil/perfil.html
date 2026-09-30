@@ -1,5 +1,10 @@
 <div class="perfil">
-    <h2>Nom: Denis Tineo Dias</h2>
-    <strong>Edat: 21</strong>
-    <p>"Alumne de DAW2"</p>
+    <h2>Nom: {{nom}}</h2>
+    <h3>Cognoms: {{cognom}}</h3>
+    <strong>Edat: {{edat}} anys</strong>
+    <p>Alumne de: {{cicle}}</p>
+    <br>
+    <p>Any de naixement: {{2026 - edat}}</p>
+    <p>És major d'edat? {{edat > 18 ? 'Major d\'edat' : 'Menor d\'edat'}}</p>
+    <strong>{{nom.toUpperCase() +' '+ cognom.toUpperCase()}}</strong>
 </div>

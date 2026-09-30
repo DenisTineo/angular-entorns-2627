@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   templateUrl: './perfil.html',
   styleUrl: './perfil.css',
 })
-export class Perfil {}
+export class Perfil {
+  nom: string = 'Denis';
+  cognom : string = 'Tineo Dias'
+  edat : number = 21;
+  cicle : string = 'DAW2';
+}
