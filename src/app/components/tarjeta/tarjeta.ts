@@ -1,6 +1,7 @@
 // aquest fitxer conté la lògica: propietats, mètodes i getters
 import { Component } from '@angular/core';
 import { Producte } from '../../interfaces/producte';
+import { Producte2 } from '../../interfaces/producte2';
 
 @Component({
   selector: 'app-tarjeta',
@@ -40,8 +41,21 @@ get estatDisponibilitat() : string {
   return 'Disponible';
 }
 
+producteXif : Producte2 = {
+  id: 1,
+  nom: 'castanya',
+  preu: 13,
+  estoc: 60,
+  categoria: 'aliment',
+  descripcio : 'Castanyes ben bones'
+};
 
+mostrarDesc = false;
+toggleDesc() : void{
+  this.mostrarDesc = !this.mostrarDesc;
 }
+}
+
 
 
 

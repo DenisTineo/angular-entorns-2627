@@ -1,17 +1,19 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Producte } from './interfaces/producte';
+import { Producte2 } from './interfaces/producte2';
 import { Producte as ProducteClass } from './producte'; //importem la classe producte assignant un alias
 import { pokemon } from './interfaces/pokemon';
 import { findById, formatarElement, getActius } from './funcions';
 import { Alumne } from './alumne';
 import { Tarjeta } from './components/tarjeta/tarjeta';
 import { Perfil } from './components/perfil/perfil';
+import { Info } from './components/info/info';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Tarjeta, Perfil],
+  imports: [RouterOutlet, Tarjeta, Perfil, Info],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

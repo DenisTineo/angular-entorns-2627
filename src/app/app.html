@@ -1,6 +1,10 @@
+<!--Sessió control flow if-->
+
+<app-info></app-info>
+
 <!-- app.hmtl-->
 <h2>El meu catàleg</h2>
-<!--@for (ciutat of ciutats; track ciutat){
+@for (ciutat of ciutats; track ciutat){
     <p>{{ciutat}}</p>
 }
 
@@ -12,14 +16,14 @@
     <p>{{ciutat}}</p>
 } @empty{
     <p>No hi ha ciutats per mostrar</p>
-}-->
+}
 
 @for (producte of productes; track producte.id; let i = $index){
     <p>{{i+1}}. {{producte.nom}}</p>
     <app-tarjeta />
 }
 
-<!-- crea un array de minim 5 elements i usa @for per mostrar-ho -->
+<!--crea un array de minim 5 elements i usa @for per mostrar-ho --> 
 
 @for (nom of noms; track nom; let i = $index){
     <p style="background-color: lightblue; border: 3px double yellow; border-radius: 10px;">{{i+1}}. {{nom}}</p>
@@ -28,3 +32,5 @@
 <app-perfil />
 <app-perfil />
 <router-outlet />
+
+
