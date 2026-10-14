@@ -16,24 +16,33 @@
     <p class="estoc">{{producte.estoc}} unitats</p>
     @if(producte.estoc >0){
     <p>{{estatDisponibilitat}}</p>
-    }
-
-
-    
+    }  
 </div>
+
+
+
 
 <div class="tarjeta">
     <h2>{{producteXif.nom}}</h2>
     <p class="categoria">{{producteXif.categoria}}</p>
     <p class="preu">{{producteXif.preu}}€ (+IVA) {{preuAmbIVA}}€</p>
     <p class="estoc">{{producteXif.estoc}} unitats</p>
-
-    <button {click} = "toggleDesc()">
+    <button (click) = "toggleDesc()">
         <p>{{mostrarDesc ? 'TANCAR' : 'VEURE'}}</p>
     </button>
-    
-    @if(mostrarDesc){
+     @if(mostrarDesc){
         <p>{{producteXif.descripcio}}</p>
     }
+    @if(producteXif.preu < 20 && producteXif.preu > 0){
+        <p>OFERTA</p>
+    }@else if(producteXif.preu > 100){
+        <p>PREMIUM</p>
+    }@else if (producteXif.preu == 0){
+        <p>GRATUIT</p>
+    }
+
+    
+
+   
     
 </div>

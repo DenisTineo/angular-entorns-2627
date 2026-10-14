@@ -22,6 +22,30 @@ export class Tarjeta {
     categoria: 'Informàtica'
   };
 
+  prod1 : Producte = {
+    id: 1,
+    nom: 'a',
+    preu: 5,
+    estoc: 4,
+    categoria: 'Informatica'
+  };
+
+  prod2 : Producte = {
+    id: 2,
+    nom: 'b',
+    preu: 6,
+    estoc: 3,
+    categoria: 'Mueble'
+  };
+
+  prod3 : Producte = {
+    id: 3,
+    nom: 'y',
+    preu: 15,
+    estoc: 0,
+    categoria: 'alegria'
+  };
+
 
 //  get nomDelGetter(): TipusRetorn {
 //    return calcul;
@@ -47,13 +71,29 @@ producteXif : Producte2 = {
   preu: 13,
   estoc: 60,
   categoria: 'aliment',
-  descripcio : 'Castanyes ben bones'
+  descripcio : 'Castanyes ben bones',
+  estat: ''
 };
 
 mostrarDesc = false;
 toggleDesc() : void{
   this.mostrarDesc = !this.mostrarDesc;
 }
+
+/*
+AGEFIR ETIQUETA OFERTA I GRATUÏT
+si el preu es inferior a 20 --> oferta
+si el preu es 0 --> gratuït
+si el preu es superior a 100 --> premium
+*/
+
+/*
+if dins d'un for per marcar productes especials
+si la categoria es informàtica --> div amb "destacat"
+podeu posar estils i si voleu emojis estrella...
+*/
+
+
 }
 
 

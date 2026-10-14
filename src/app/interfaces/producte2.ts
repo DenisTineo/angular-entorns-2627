@@ -5,4 +5,5 @@ export interface Producte2{
 	estoc : number;
 	categoria: string;
     descripcio : string;
+	estat: string;
 }
