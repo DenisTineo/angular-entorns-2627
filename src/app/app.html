@@ -1,36 +1,16 @@
-<!--Sessió control flow if-->
+<h2>BINDINGS EN ANGULAR</h2>
 
-<app-info></app-info>
+<!--INTERPOLACIÓ : {{}} TS -> HTML (text)-->
+<!--PROPERTY BINDING : [propietat]="expr" TS -> HTML (propietats DOM)-->
 
-<!-- app.hmtl-->
-<h2>El meu catàleg</h2>
-@for (ciutat of ciutats; track ciutat){
-    <p>{{ciutat}}</p>
-}
+<!--
 
-@for (ciutat of ciutats; track ciutat; let i = $index){
-    <p>{{i+1}}. {{ciutat}}</p>
-}
+disabled = "true" -> atribut amb text "true" (sempre deshabilitat)
+[disabled] = "true" -> angular evaluarà el booleà true i  assignarà aquest booleà a la propietat 
 
-@for (ciutat of ciutats; track ciutat){
-    <p>{{ciutat}}</p>
-} @empty{
-    <p>No hi ha ciutats per mostrar</p>
-}
+-->
 
-@for (producte of productes; track producte.id; let i = $index){
-    <p>{{i+1}}. {{producte.nom}}</p>
-    <app-tarjeta />
-}
-
-<!--crea un array de minim 5 elements i usa @for per mostrar-ho --> 
-
-@for (nom of noms; track nom; let i = $index){
-    <p style="background-color: lightblue; border: 3px double yellow; border-radius: 10px;">{{i+1}}. {{nom}}</p>
-}
-
-<app-perfil />
-<app-perfil />
+<app-botiga></app-botiga>
 <router-outlet />
 
 

@@ -9,11 +9,12 @@ import { Alumne } from './alumne';
 import { Tarjeta } from './components/tarjeta/tarjeta';
 import { Perfil } from './components/perfil/perfil';
 import { Info } from './components/info/info';
+import { Botiga } from './bindings/botiga/botiga';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Tarjeta, Perfil, Info],
+  imports: [RouterOutlet, Tarjeta, Perfil, Info, Botiga],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
