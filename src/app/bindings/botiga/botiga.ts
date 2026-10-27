@@ -11,6 +11,16 @@ export class Botiga {
   title='Botiga de Bindings';
   productes :  ProducteLab[] = PRODUCTES_LAB;
   modeCompacte = false;
+  carret: number[] =  [];
+  
+  /*creea un mètode per mostrar el que hi ha al carret */
+  mostrar(): string{
+    let resultado = '';
+    for(let id of this.carret){
+      resultado += id+ ' ';
+    }
+    return resultado;
+  }
 
   teEstoc(p: ProducteLab): boolean {
     return p.estoc > 0;
@@ -35,4 +45,12 @@ export class Botiga {
   urlFitxa(p: ProducteLab): string {
     return `https://botiga.cat/producte/${p.id}`;
   }
+
+  afegir(p: ProducteLab) : void {
+    if (this.teEstoc(p)){
+      this.carret.push(p.id);
+    }
+  }
+
+
 }

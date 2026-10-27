@@ -30,7 +30,8 @@
             <article [class] = "classesFitxa(p)">
                 <h2>{{p.nom}}</h2>
                 <p class="preu" [style.color]="p.preu>500 ? 'yellow' : 'blue'">{{p.preu}} €</p>
-                <button class="btn-compra" [disabled]="!teEstoc(p)">Afegir al carret</button>
+                <button class="btn-compra" [disabled]="!teEstoc(p)" (click) = "afegir(p)">Afegir al carret</button>
+                <p [textContent] = "mostrar()"></p>
             </article>
         }
     </div>
